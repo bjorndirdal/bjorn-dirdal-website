@@ -44,6 +44,19 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
 const cards = [...document.querySelectorAll(".argument-card")];
 const panels = [...document.querySelectorAll(".argument-panel")];
 
+const inlineImages = window.__inlineImages || {};
+
+document.querySelectorAll("[data-inline-image]").forEach((image) => {
+  const key = image.dataset.inlineImage;
+  const chunks = inlineImages[key];
+
+  if (!chunks || image.getAttribute("src")) {
+    return;
+  }
+
+  image.src = `data:image/jpeg;base64,${chunks.join("")}`;
+});
+
 if (cards.length && panels.length) {
   const activate = (key) => {
     cards.forEach((card) => {
