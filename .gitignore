@@ -1,0 +1,15 @@
+.DS_Store
+
+# Keep the publication package focused on the assets actually used by the site.
+assets/avatar-base.png
+assets/avatar-candidate-1.png
+assets/avatar-candidate-2.png
+assets/avatar-candidate-3.png
+assets/avatar-crop-a.png
+assets/avatar-crop-b.png
+assets/avatar-crop-c.png
+assets/avatar-rot-cw.png
+assets/avatar-rot-ccw.png
+assets/berkeley-club-soccer.jpg
+assets/bjorn-dirdal-cv-headshot.png
+assets/header-avatar.png
