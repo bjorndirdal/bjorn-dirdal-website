@@ -165,9 +165,25 @@
       </div>
     </footer>
 
-    <script src="./assets/inline-image-portrait.js"></script>
-    <script src="./assets/inline-image-football.js"></script>
-    <script src="./assets/inline-image-team.js"></script>
-    <script src="./script.js"></script>
+    <script src="./assets/inline-image-portrait.js?v=20260422c"></script>
+    <script src="./assets/inline-image-football.js?v=20260422c"></script>
+    <script src="./assets/inline-image-team.js?v=20260422c"></script>
+    <script>
+      (() => {
+        const inlineImages = window.__inlineImages || {};
+
+        document.querySelectorAll("[data-inline-image]").forEach((image) => {
+          const key = image.dataset.inlineImage;
+          const chunks = inlineImages[key];
+
+          if (!chunks) {
+            return;
+          }
+
+          image.src = `data:image/jpeg;base64,${chunks.join("")}`;
+        });
+      })();
+    </script>
+    <script src="./script.js?v=20260422c"></script>
   </body>
 </html>
