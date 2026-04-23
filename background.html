@@ -293,15 +293,13 @@
           <div class="image-strip reveal">
             <img
               class="image-strip-photo"
-              src=""
-              data-inline-image="footballMatch"
+              src="./assets/IMG_5005.jpeg"
               alt="Bjørn Dirdal in match action during senior football."
               loading="lazy"
             />
             <img
               class="image-strip-photo"
-              src=""
-              data-inline-image="teamPhoto"
+              src="./assets/IMG_5215.jpeg"
               alt="Team photo from Bjørn Dirdal's football background."
               loading="lazy"
             />
@@ -316,25 +314,6 @@
       </div>
     </footer>
 
-    <script src="./assets/inline-image-portrait.js?v=20260422d"></script>
-    <script src="./assets/inline-image-football.js?v=20260422d"></script>
-    <script src="./assets/inline-image-team.js?v=20260422d"></script>
-    <script>
-      (() => {
-        const inlineImages = window.__inlineImages || {};
-
-        document.querySelectorAll("[data-inline-image]").forEach((image) => {
-          const key = image.dataset.inlineImage;
-          const chunks = inlineImages[key];
-
-          if (!chunks) {
-            return;
-          }
-
-          image.src = `data:image/jpeg;base64,${chunks.join("")}`;
-        });
-      })();
-    </script>
     <script src="./script.js?v=20260422d"></script>
   </body>
 </html>
