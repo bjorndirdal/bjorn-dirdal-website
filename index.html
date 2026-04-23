@@ -95,8 +95,7 @@
             <figure class="spotlight-card portrait-card reveal">
               <img
                 class="portrait-image"
-                src=""
-                data-inline-image="portraitHome"
+                src="./assets/27c5221503b23c3ba4d09596e3cf2870c97bc34b12b7a6a74b775cd7564462e4.png"
                 alt="Portrait of Bjørn Dirdal in formal attire."
               />
             </figure>
@@ -165,25 +164,6 @@
       </div>
     </footer>
 
-    <script src="./assets/inline-image-portrait.js?v=20260422d"></script>
-    <script src="./assets/inline-image-football.js?v=20260422d"></script>
-    <script src="./assets/inline-image-team.js?v=20260422d"></script>
-    <script>
-      (() => {
-        const inlineImages = window.__inlineImages || {};
-
-        document.querySelectorAll("[data-inline-image]").forEach((image) => {
-          const key = image.dataset.inlineImage;
-          const chunks = inlineImages[key];
-
-          if (!chunks) {
-            return;
-          }
-
-          image.src = `data:image/jpeg;base64,${chunks.join("")}`;
-        });
-      })();
-    </script>
     <script src="./script.js?v=20260422d"></script>
   </body>
 </html>
