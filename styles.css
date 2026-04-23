@@ -359,7 +359,7 @@ button {
 }
 
 .aside-list,
-.detail-list,
+detail-list,
 .timeline-list,
 .contact-list,
 .source-list {
@@ -622,6 +622,32 @@ button {
   grid-template-columns: 0.94fr 1.06fr;
   gap: 22px;
   align-items: start;
+}
+
+.interaction-guide {
+  display: grid;
+  grid-template-columns: 0.94fr 1.06fr;
+  gap: 22px;
+  margin: -4px 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.interaction-guide span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.interaction-guide span::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
 }
 
 .argument-card-grid {
@@ -893,7 +919,8 @@ button {
   .story-grid,
   .grid-3,
   .callout-grid,
-  .flow {
+  .flow,
+  .interaction-guide {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -949,7 +976,8 @@ button {
   .grid-3,
   .callout-grid,
   .flow,
-  .argument-columns {
+  .argument-columns,
+  .interaction-guide {
     grid-template-columns: 1fr;
   }
 
